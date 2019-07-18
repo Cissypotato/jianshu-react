@@ -4,6 +4,7 @@ import logoPic from './../../static/logo.png'
 export const HeaderWrapper=styled.div`
     position:relative;
     height:56px;
+    width:100%;
     border-bottom:1px solid #f0f0f0;
 `
 
@@ -41,18 +42,7 @@ export const SearchWrapper=styled.div`
     // border:1px solid red;
     float:left;
     position:relative;
-    .slide-enter{
-        transition:all .2s ease-out;
-    }
-    .slide-enter-active{
-        width:240px;
-    }
-    .slide-exit{
-        transition:all .2s ease-out;
-    }
-    .slide-exit-active{
-        width:160px;
-    }
+    margin-left:10px;
     .iconfont{
         position:absolute;
         bottom:5px;
@@ -82,7 +72,7 @@ export const NavSearch=styled.input.attrs({
     padding-left:20px;
     padding-right:40px;
     font-size:14px;
-    margin:9px 10px 0 10px;
+    margin:9px 10px 0 0px;
     color:#666;
     &::placeholder{
         color:#999
@@ -90,8 +80,65 @@ export const NavSearch=styled.input.attrs({
     &.focused{
         width:240px;
     }
+    &.slide-enter{
+        transition:all .2s ease-out;
+    }
+    &.slide-enter-active{
+        width:240px;
+    }
+    &.slide-exit{
+        transition:all .2s ease-out;
+    }
+    &.slide-exit-active{
+        width:160px;
+    }
     
     
+`
+export const SearchInfo=styled.div`
+    position:absolute;
+    box-sizing:border-box;
+    padding:20px 20px 10px;
+    width:250px;
+    left:0;
+    top:100%;
+    margin-top:9px;
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+    
+`
+export const SearchHeading=styled.div`
+    // border:1px solid red;
+    overflow:hidden;
+    margin-bottom:10px;
+`
+export const SearchTitle=styled.span`
+    color:#969696;
+    font-size:14px;
+    float:left;
+    
+`
+export const SearchSwitch=styled.a`
+    color:#969696;
+    font-size:13px;
+    float:right;
+    
+`
+export const SearchList=styled.div`
+    // border:1px solid red;
+    overflow:hidden;
+    
+`
+export const SearchItem=styled.a`
+    display:block;
+    line-height:16px;
+    color:#787878;
+    margin-bottom:10px;
+    padding:2px 6px;
+    margin-right:10px;
+    border:1px solid #ddd;
+    font-size:12px;
+    border-radius:3px
+    float:left;  
 `
 export const Addition=styled.div`
     position:absolute;
@@ -102,6 +149,7 @@ export const Addition=styled.div`
     // border:1px solid red;
     display:felx;
 `
+
 export const Button=styled.div`
     box-sizing:border-box;
     height:38px;
